@@ -9,6 +9,130 @@
     </head>
 
     <body>
+
+        <div id="vehicles_menu" class="header-menu hidden">
+            <!-- Carros -->
+            <div class="cars">
+                <div class="car">
+                    <figure>
+                        <img
+                            src="./src/assets/images/cars/sideVIew/white.svg"
+                            alt
+                            draggable="false"
+                            loading="false" />
+                    </figure>
+
+                    <h2>Modelo v1</h2>
+                    
+                    <div class="btns">
+                        <p class="btn">Ver mais</p>
+                        <p class="btn">Comprar</p>
+                    </div>
+                </div>
+
+                <div class="car">
+                    <figure>
+                        <img
+                            src="./src/assets/images/cars/sideVIew/red.svg"
+                            alt
+                            draggable="false"
+                            loading="false" />
+                    </figure>
+
+                    <h2>Modelo v2</h2>
+                    
+                    <div class="btns">
+                        <p class="btn">Ver mais</p>
+                        <p class="btn">Comprar</p>
+                    </div>
+                </div>
+
+                <div class="car">
+                    <figure>
+                        <img
+                            src="./src/assets/images/cars/sideVIew/black.svg"
+                            alt
+                            draggable="false"
+                            loading="false" />
+                    </figure>
+
+                    <h2>Modelo v3</h2>
+                    
+                    <div class="btns">
+                        <p class="btn">Ver mais</p>
+                        <p class="btn">Comprar</p>
+                    </div>
+                </div>
+
+                <div class="car car-second-row">
+                    <figure>
+                        <img
+                            src="./src/assets/images/cars/sideVIew/green.svg"
+                            alt
+                            draggable="false"
+                            loading="false" />
+                    </figure>
+
+                    <h2>Modelo v1</h2>
+                    
+                    <div class="btns">
+                        <p class="btn">Ver mais</p>
+                        <p class="btn">Comprar</p>
+                    </div>
+                </div>
+
+                <div class="car car-second-row">
+                    <figure>
+                        <img
+                            src="./src/assets/images/cars/sideVIew/white.svg"
+                            alt
+                            draggable="false"
+                            loading="false" />
+                    </figure>
+
+                    <h2>Modelo v1</h2>
+                    
+                    <div class="btns">
+                        <p class="btn">Ver mais</p>
+                        <p class="btn">Comprar</p>
+                    </div>
+                </div>
+
+                <div class="car car-second-row">
+                    <figure>
+                        <img
+                            src="./src/assets/images/cars/sideVIew/white.svg"
+                            alt
+                            draggable="false"
+                            loading="false" />
+                    </figure>
+
+                    <h2>Modelo v1</h2>
+                    
+                    <div class="btns">
+                        <p class="btn">Ver mais</p>
+                        <p class="btn">Comprar</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Seções -->
+            <div class="sections">
+                <div class="title">
+                    <p>Navegue</p>
+                </div>
+
+                <div class="pages">
+                    <p>Ofertas</p>
+                    <p>Test drive</p>
+                    <p>Lojas</p>
+                    <p>Serviços</p>
+                    <p>Sac</p>
+                    <p>Privacidade</p>
+                </div>
+            </div>
+        </div>
+
         <header>
             <figure>
                 <img src="./src/assets/images/brand/Logo-name.svg"
@@ -24,7 +148,7 @@
                     <p>Sobre</p>
                     <div class="line"></div>
                 </div>
-                <div class="header-link">
+                <div onclick="openCloseVehiclesMenu()" class="header-link">
                     <p>Veículos</p>
                     <div class="line"></div>
                 </div>
@@ -225,5 +349,7 @@
                 <p>Todos os direitos reservados</p>
             </section>
         </footer>
+
+        <script src="./src/scripts/header.js"></script>
     </body>
 </html>
