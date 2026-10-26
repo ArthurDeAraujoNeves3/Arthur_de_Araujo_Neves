@@ -1,8 +1,4 @@
 @import "./src/styles/_variables.css";
-@import "./src/styles/header.css";
-@import "./src/styles/footer.css";
-@import "./src/styles/cars.css";
-@import "./src/styles/hero.css";
 
 /* Reset de estilos padroes do site */
 * {
