@@ -2,5 +2,5 @@
 </script>
 
 <template>
-
+    <p>DETALHES</p>
 </template>

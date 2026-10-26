@@ -17,6 +17,11 @@
     src: url(./assets/fonts/text/HostGrotesk-VariableFont_wght.ttf);
 }
 
+/* Removendo underline do link do Router */
+.router-link-active {
+    text-decoration: none;
+}
+
 body {
     background-color: var(--bg);
     color: var(--text);

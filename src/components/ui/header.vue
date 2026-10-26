@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+  import { RouterLink } from 'vue-router';
+</script>
 
 <template>
   <div id="vehicles_menu" class="header-menu hidden">
@@ -140,10 +142,10 @@
     </figure>
 
     <div class="header-pages">
-      <div class="header-link">
+      <RouterLink to="/" class="header-link">
         <p>Home</p>
         <div class="line"></div>
-      </div>
+      </RouterLink>
       <div class="header-link">
         <p>Sobre</p>
         <div class="line"></div>
@@ -187,6 +189,8 @@ header {
   transition: 0.2s;
 }
 .header-link > p {
+  color: var(--text);
+  text-decoration: nonnonee;
   font-family: "title";
   text-transform: uppercase;
   cursor: pointer;
