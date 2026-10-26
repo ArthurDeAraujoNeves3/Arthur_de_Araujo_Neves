@@ -1,4 +1,4 @@
-<script scoped></script>
+<script setup></script>
 
 <template>
   <section class="Hero">
@@ -16,3 +16,39 @@
     </div>
   </section>
 </template>
+
+<style scoped>
+.Hero {
+  background-image: url("../assets/images/Hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 80vh;
+}
+.Hero > .Content {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 50%;
+  height: 100%;
+  padding: 64px 64px;
+  gap: 24px;
+}
+.Hero > .Content > h1 {
+  font-family: "title";
+  font-weight: normal;
+  font-size: 72px;
+  color: white;
+}
+.Hero > .Content > p {
+  font-size: 20px;
+  color: white;
+}
+.Hero > .Content > .btns {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  gap: 16px;
+}
+</style>
