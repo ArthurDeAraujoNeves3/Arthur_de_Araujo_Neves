@@ -19,7 +19,7 @@
 
 <style scoped>
 .Hero {
-  background-image: url("../assets/images/Hero.png");
+  background-image: url("../../../assets/images/Hero.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

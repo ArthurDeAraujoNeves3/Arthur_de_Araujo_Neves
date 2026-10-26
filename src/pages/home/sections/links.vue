@@ -7,7 +7,7 @@
 
       <figure>
         <img
-          src="../../assets/images/arrow-icon.svg"
+          src="../../../assets/images/arrow-icon.svg"
           alt="arrow-icon"
           draggable="false"
         />
@@ -19,7 +19,7 @@
 
       <figure>
         <img
-          src="../../assets/images/arrow-icon.svg"
+          src="../../../assets/images/arrow-icon.svg"
           alt="arrow-icon"
           draggable="false"
         />
@@ -31,7 +31,7 @@
 
       <figure>
         <img
-          src="../../assets/images/arrow-icon.svg"
+          src="../../../assets/images/arrow-icon.svg"
           alt="arrow-icon"
           draggable="false"
         />

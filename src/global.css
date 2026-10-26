@@ -1,4 +1,4 @@
-@import "./src/styles/_variables.css";
+@import "./styles/_variables.css";
 
 /* Reset de estilos padroes do site */
 * {
@@ -10,11 +10,11 @@
 /* Fontes */
 @font-face {
     font-family: "title";
-    src: url(./src/assets/fonts/title/Genos-VariableFont_wght.ttf);
+    src: url(./assets/fonts/title/Genos-VariableFont_wght.ttf);
 }
 @font-face {
     font-family: "text";
-    src: url(./src/assets/fonts/text/HostGrotesk-VariableFont_wght.ttf);
+    src: url(./assets/fonts/text/HostGrotesk-VariableFont_wght.ttf);
 }
 
 body {

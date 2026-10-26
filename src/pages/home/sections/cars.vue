@@ -33,7 +33,7 @@
 
       <figure>
         <img
-          src="./src/assets/images/cars/v2.png"
+          src="../../../assets/images/cars/v2.png"
           alt="Carro"
           draggable="false"
         />
@@ -77,7 +77,7 @@
 
       <figure>
         <img
-          src="./src/assets/images/cars/v1.png"
+          src="../../../assets/images/cars/v1.png"
           alt="Carro"
           draggable="false"
         />
