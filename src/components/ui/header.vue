@@ -1,9 +1,12 @@
 <script setup>
-  import { RouterLink } from 'vue-router';
+  import { ref } from 'vue';
+import { RouterLink } from 'vue-router';
+
+  const showVehiclesHeader = ref(false);
 </script>
 
 <template>
-  <div id="vehicles_menu" class="header-menu hidden">
+  <div id="vehicles_menu" v-if="showVehiclesHeader" class="header-menu">
     <!-- Carros -->
     <div class="cars">
       <div class="car">
@@ -150,7 +153,7 @@
         <p>Sobre</p>
         <div class="line"></div>
       </div>
-      <div onclick="openCloseVehiclesMenu()" class="header-link">
+      <div @click="showVehiclesHeader = !showVehiclesHeader" class="header-link">
         <p>Veículos</p>
         <div class="line"></div>
       </div>
@@ -212,7 +215,8 @@ header {
   justify-content: center;
   margin-top: 80px;
   width: 100%;
-  height: 500px;
+  height: auto;
+  max-height: 80vh;
   background-color: var(--bg);
   border-top: 1px solid #d8d8d8;
   box-shadow: 0 7px 27.4px -9px rgba(0, 0, 0, 0.13);
