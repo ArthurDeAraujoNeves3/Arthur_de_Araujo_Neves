@@ -1,9 +1,10 @@
 <script setup>
-import Benefits from "./sections/benefits.vue";
+import Benefits from "./sections/benefits/benefits.vue";
 import CarParts from "./sections/carParts.vue";
 import FAQ from "./sections/faq.vue";
 import Hero from "./sections/hero.vue";
 import Technology from "./sections/technology.vue";
+import Highway from "../../assets/images/vinci/highway.jpg"
 </script>
 
 <template>
@@ -14,7 +15,7 @@ import Technology from "./sections/technology.vue";
   <section class="highway">
     <figure>
       <img
-        src="./src/assets/images/vinci/highway.jpg"
+        :src="Highway"
         alt="Carro sendo dirigido na estrada"
         draggable="false"
       />

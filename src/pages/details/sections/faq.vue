@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+  import ArrowDown from "../../../assets/images/vinci/arrow_down.svg"
+</script>
 
 <template>
   <section class="faq">
@@ -16,7 +18,7 @@
 
         <figure>
           <img
-            src="../../../assets/images/vinci/arrow_down.svg"
+            :src="ArrowDown"
             alt="Seta para baixo"
             draggable="false"
           />
@@ -31,7 +33,7 @@
 
         <figure>
           <img
-            src="../../../assets/images/vinci/arrow_down.svg"
+            :src="ArrowDown"
             alt="Seta para baixo"
             draggable="false"
           />
@@ -46,7 +48,7 @@
 
         <figure>
           <img
-            src="../../../assets/images/vinci/arrow_down.svg"
+            :src="ArrowDown"
             alt="Seta para baixo"
             draggable="false"
           />
@@ -60,7 +62,7 @@
 
         <figure>
           <img
-            src="../../../assets/images/vinci/arrow_down.svg"
+            :src="ArrowDown"
             alt="Seta para baixo"
             draggable="false"
           />
@@ -75,7 +77,7 @@
 
         <figure>
           <img
-            src="../../../assets/images/vinci/arrow_down.svg"
+            :src="ArrowDown"
             alt="Seta para baixo"
             draggable="false"
           />

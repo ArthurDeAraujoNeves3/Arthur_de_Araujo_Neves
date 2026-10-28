@@ -1,10 +1,12 @@
-<script setup></script>
+<script setup>
+import Car from "../../../assets/images/vinci/car.png"
+</script>
 
 <template>
   <section class="hero">
     <figure class="car">
       <img
-        src="../../../assets/images/vinci/car.png"
+        :src="Car"
         alt="Vinci Model 3"
         draggable="false"
       />

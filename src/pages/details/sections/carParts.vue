@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import CarRedBullets from "../../../assets/images/vinci/car_red_bullets.png"
+</script>
 
 <template>
   <section class="car-parts">
@@ -62,7 +64,7 @@
 
     <figure>
       <img
-        src="./src/assets/images/vinci/car_red_bullets.png"
+        :src="CarRedBullets"
         alt="Imagem de um carro com vários pontos vermelhos"
         draggable="false"
       />
