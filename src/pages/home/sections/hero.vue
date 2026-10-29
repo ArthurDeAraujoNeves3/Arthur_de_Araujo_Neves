@@ -25,6 +25,7 @@
   background-repeat: no-repeat;
   width: 100%;
   height: 80vh;
+  min-height: 520px;
 }
 .Hero > .Content {
   display: flex;
@@ -32,23 +33,49 @@
   justify-content: end;
   width: 50%;
   height: 100%;
-  padding: 64px 64px;
+  padding: 64px;
   gap: 24px;
 }
 .Hero > .Content > h1 {
   font-family: "title";
   font-weight: normal;
-  font-size: 72px;
+  font-size: clamp(40px, 6vw, 72px);
   color: white;
 }
 .Hero > .Content > p {
-  font-size: 20px;
+  font-size: clamp(16px, 1.6vw, 20px);
   color: white;
 }
 .Hero > .Content > .btns {
   display: flex;
   align-items: center;
-  width: 500px;
+  width: 100%;
+  max-width: 500px;
   gap: 16px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .Hero > .Content {
+    width: 70%;
+    padding: 48px;
+  }
+}
+
+/* Celular */
+@media (max-width: 640px) {
+  .Hero {
+    height: 90vh;
+    background-position: 65% center;
+  }
+  .Hero > .Content {
+    width: 100%;
+    padding: 32px 24px;
+    gap: 16px;
+  }
+  .Hero > .Content > .btns {
+    flex-direction: column;
+    max-width: none;
+  }
 }
 </style>

@@ -1,15 +1,11 @@
 <script setup>
-import Car from "../../../assets/images/vinci/car.png"
+import Car from "../../../assets/images/vinci/car.png";
 </script>
 
 <template>
   <section class="hero">
     <figure class="car">
-      <img
-        :src="Car"
-        alt="Vinci Model 3"
-        draggable="false"
-      />
+      <img :src="Car" alt="Vinci Model 3" draggable="false" />
     </figure>
 
     <div class="content">
@@ -34,6 +30,7 @@ import Car from "../../../assets/images/vinci/car.png"
   flex-direction: column;
 }
 .hero > .car > img {
+  max-width: 100%;
   width: 1000px;
 }
 .hero > .content {
@@ -51,5 +48,11 @@ import Car from "../../../assets/images/vinci/car.png"
   flex-direction: row;
   gap: 16px;
   width: 70%;
+}
+
+@media (max-width: 1020px) {
+  .hero > .content {
+    width: 80%;
+  }
 }
 </style>

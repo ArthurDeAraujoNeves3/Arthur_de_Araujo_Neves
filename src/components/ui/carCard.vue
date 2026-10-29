@@ -9,7 +9,7 @@ const { title, power, autonomy, weight, technology, v1 } = defineProps({
   autonomy: Number,
   weight: Number,
   technology: String,
-  v1: Boolean
+  v1: Boolean,
 });
 </script>
 
@@ -43,11 +43,7 @@ const { title, power, autonomy, weight, technology, v1 } = defineProps({
     </div>
 
     <figure>
-      <img
-        :src="v1 ? V1 : V2"
-        alt="Carro"
-        draggable="false"
-      />
+      <img :src="v1 ? V1 : V2" alt="Carro" draggable="false" />
     </figure>
 
     <!--Footer-->
@@ -69,6 +65,7 @@ const { title, power, autonomy, weight, technology, v1 } = defineProps({
 .car-model > .header {
   display: flex;
   align-items: start;
+  flex-direction: row;
   justify-content: space-between;
 }
 .car-model > .header > p {
@@ -117,5 +114,28 @@ const { title, power, autonomy, weight, technology, v1 } = defineProps({
   color: black;
   font-size: 20px;
   cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .car-model > .footer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  .car-model {
+    align-items: center;
+    width: 100%;
+  }
+  .car-model > .header {
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+  }
+  .car-model > .header > .details,
+  .car-model > .header > .details > .detail {
+    justify-content: space-between;
+    width: 100%;
+  }
 }
 </style>

@@ -1,5 +1,35 @@
 <script setup>
-  import ArrowDown from "../../../assets/images/vinci/arrow_down.svg"
+import { ref } from "vue";
+import ArrowDown from "../../../assets/images/vinci/arrow_down.svg";
+
+const openIndex = ref(null);
+
+function toggle(index) {
+  openIndex.value = openIndex.value === index ? null : index;
+}
+
+const questions = [
+  {
+    question:
+      "Qual é a autonomia real da bateria em diferentes condições de condução?",
+  },
+  {
+    question:
+      "Quanto tempo o carro leva para carregar em tomadas residenciais e em carregadores rápidos?",
+  },
+  {
+    question:
+      "Como funciona a infraestrutura de recarga para viagens de longa distância?",
+  },
+  {
+    question:
+      "Qual é o tempo de garantia da bateria e qual a sua vida útil estimada?",
+  },
+  {
+    question:
+      "Quais são as principais economias em manutenção e impostos comparado a um carro a combustão?",
+  },
+];
 </script>
 
 <template>
@@ -10,78 +40,22 @@
     </div>
 
     <div class="questions">
-      <div class="question">
-        <p>
-          Qual é a autonomia real da bateria em diferentes condições de
-          condução?
-        </p>
+      <div
+        v-for="(item, index) in questions"
+        :key="item.question"
+        class="question"
+        :class="{ open: openIndex === index }"
+      >
+        <button
+          type="button"
+          class="question-header"
+        >
+          <span>{{ item.question }}</span>
 
-        <figure>
-          <img
-            :src="ArrowDown"
-            alt="Seta para baixo"
-            draggable="false"
-          />
-        </figure>
-      </div>
-
-      <div class="question">
-        <p>
-          Quanto tempo o carro leva para carregar em tomadas residenciais e em
-          carregadores rápidos?
-        </p>
-
-        <figure>
-          <img
-            :src="ArrowDown"
-            alt="Seta para baixo"
-            draggable="false"
-          />
-        </figure>
-      </div>
-
-      <div class="question">
-        <p>
-          Como funciona a infraestrutura de recarga para viagens de longa
-          distância?
-        </p>
-
-        <figure>
-          <img
-            :src="ArrowDown"
-            alt="Seta para baixo"
-            draggable="false"
-          />
-        </figure>
-      </div>
-
-      <div class="question">
-        <p>
-          Qual é o tempo de garantia da bateria e qual a sua vida útil estimada?
-        </p>
-
-        <figure>
-          <img
-            :src="ArrowDown"
-            alt="Seta para baixo"
-            draggable="false"
-          />
-        </figure>
-      </div>
-
-      <div class="question">
-        <p>
-          Quais são as principais economias em manutenção e impostos comparado a
-          um carro a combustão?
-        </p>
-
-        <figure>
-          <img
-            :src="ArrowDown"
-            alt="Seta para baixo"
-            draggable="false"
-          />
-        </figure>
+          <figure>
+            <img :src="ArrowDown" alt="" draggable="false" />
+          </figure>
+        </button>
       </div>
     </div>
   </section>
@@ -93,43 +67,71 @@
   flex-direction: column;
   align-items: center;
   gap: 32px;
+  width: 100%;
+  padding: 0 60px;
 }
 .faq > .heading {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 .faq > .heading > .title {
   font-family: "title";
   color: var(--text);
-  font-size: 42px;
+  font-size: clamp(32px, 4vw, 42px);
   text-transform: uppercase;
 }
 .faq > .heading > .desc {
   font-family: "title";
   color: var(--subtitle);
-  font-size: 22px;
+  font-size: clamp(18px, 2vw, 22px);
   text-transform: uppercase;
 }
+
 .faq > .questions {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  width: 100%;
+  max-width: 1100px;
 }
-.faq > .questions > .question {
+.question {
+  border-bottom: 1px solid var(--border);
+}
+
+.question-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 64px;
+  gap: 24px;
+  width: 100%;
+  padding: 20px 0;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
 }
-.faq > .questions > .question > p {
+.question-header > span {
+  flex: 1;
+  min-width: 0;
   font-family: "title";
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: clamp(16px, 2vw, 20px);
   color: var(--title);
-  max-width: 80%;
 }
-.faq > .questions > .question > figure > img {
+.question-header > figure {
+  flex-shrink: 0;
+  display: flex;
+}
+.question-header > figure > img {
   width: 20px;
+  transition: transform 0.2s;
+}
+
+/* Tablet */
+@media (max-width: 1120px) {
+  .faq {
+    padding: 0 24px;
+  }
 }
 </style>
